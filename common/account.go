@@ -31,7 +31,7 @@ type FlowWater struct {
 	Extra  string `json:"extra"`                                       //额外信息，比如发起系统等
 }
 
-//积分账户
+//积分账户->跟着用户走
 type PointAccount struct {
 	_account
 	CountAmount     int64  `json:"count" Field:"sum_amount"`   //获取的总的积分
