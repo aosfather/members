@@ -19,3 +19,11 @@ func (this *Money)SumByNumber(n UnitNumber){
 func (this Money)ToSumByNumber(n UnitNumber) Money{
 	return Money(int64(this)*int64(n))
 }
+
+func (this Money)ToDiscount(discounts... Money) Money{
+	result:=int64(this)
+	for _,d:=range discounts {
+		result-=int64(d)
+	}
+	return Money(result)
+}
